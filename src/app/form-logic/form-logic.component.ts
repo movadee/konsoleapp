@@ -27,6 +27,7 @@ export class FormLogicComponent implements OnInit, OnDestroy {
   };
 
   createComponent(data) {
+    setTimeout(() => {
     console.log(this.container);
     if(this.container){
       this.container.clear();
@@ -46,6 +47,7 @@ export class FormLogicComponent implements OnInit, OnDestroy {
       (<FormTemplateBaseComponent>componentRef.instance).data = data;
       (<FormTemplateBaseComponent>componentRef.instance).group = this.heroForm;
     }
+  }, 1000);
   }
 
     ngOnDestroy() {

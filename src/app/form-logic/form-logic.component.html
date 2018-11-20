@@ -1,6 +1,6 @@
 <form [formGroup]="heroForm">
   <div *ngFor="let item of items.fields">
-    <div #alertContainer (onCreate)="createComponent(item)">hello</div>
+    <div #alertContainer (onCreate)="createComponent(item)"></div>
   </div>
   <!-- <template #alertContainer *ngFor="let item of items.fields"  (onCreate)="createComponent(item)"></template> -->
   <!-- <app-form-item *ngFor="let item of items.fields"  [group]="heroForm" [data]="item"></app-form-item> -->
