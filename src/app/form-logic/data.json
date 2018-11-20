@@ -1,0 +1,85 @@
+
+{
+    "fields": [
+      {
+        "id": "firstName",
+        "type": "form-text-input",
+        "componentType": "formTextInput",
+        "value": {
+          "label": "First Name",
+          "placeholder": "Jane"
+        },
+        "data": "Lucy",
+        "validation": [
+          {
+            "type": "required",
+            "message": "First name is required",
+            "arguments": true
+          }
+        ]
+      },
+      {
+        "id": "lastName",
+        "type": "form-text-input",
+        "componentType": "formTextInput",
+        "value": {
+          "label": "Last Name",
+          "placeholder": "Doe"
+        },
+        "data": "",
+        "validation": [
+          {
+            "type": "required",
+            "message": "Last Name is required",
+            "arguments": true
+          }
+        ]
+      },
+      {
+        "id": "maidenName",
+        "type": "form-text-input",
+        "componentType": "formTextInput",
+        "value": {
+          "label": "Maiden Name",
+          "placeholder": ""
+        },
+        "data": "",
+        "validation": [
+          {
+            "type": "required",
+            "message": "Maiden Name is required",
+            "arguments": false
+          }
+        ]
+      },
+  
+      {
+        "id": "maidenName",
+        "type": "form-text-input",
+        "componentType": "formTextInput",
+        "value": {
+          "label": "Maiden Name",
+          "placeholder": ""
+        },
+        "data": "",
+        "validation": [
+  
+        ]
+      },
+  
+      {
+        "id": "emailCheckbox",
+        "type": "form-checkbox",
+        "componentType": "formCheckbox",
+        "value": {
+          "label": "Can we send you emails?",
+          "placeholder": ""
+        },
+        "data": "",
+        "validation": [
+  
+        ]
+      }
+    ]
+  }
+  

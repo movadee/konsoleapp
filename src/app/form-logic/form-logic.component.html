@@ -1,0 +1,3 @@
+<form [formGroup]="heroForm">
+  <app-form-item *ngFor="let item of items.fields"  [group]="heroForm" [data]="item"></app-form-item>
+</form>
