@@ -15,6 +15,7 @@ import { CheckboxComponent } from './form-components/checkbox/checkbox.component
 import { InputTextComponent } from './form-components/input-text/input-text.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FormTemplateBaseComponent } from './form-components/form-component-base.component';
+import { OnCreateDirective } from './on-create.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormTemplateBaseComponent } from './form-components/form-component-base
     InputTextComponent,
     CheckboxComponent,
     FormItemComponent,
+    OnCreateDirective,
   ],
   imports: [
     FormsModule,

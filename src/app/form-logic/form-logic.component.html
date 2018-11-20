@@ -1,3 +1,7 @@
 <form [formGroup]="heroForm">
-  <app-form-item *ngFor="let item of items.fields"  [group]="heroForm" [data]="item"></app-form-item>
+  <div *ngFor="let item of items.fields">
+    <div #alertContainer (onCreate)="createComponent(item)">hello</div>
+  </div>
+  <!-- <template #alertContainer *ngFor="let item of items.fields"  (onCreate)="createComponent(item)"></template> -->
+  <!-- <app-form-item *ngFor="let item of items.fields"  [group]="heroForm" [data]="item"></app-form-item> -->
 </form>
