@@ -8,24 +8,25 @@ import { AppComponent } from './app.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import {MatCheckboxModule, MatCardModule, MatInputModule} from '@angular/material';
+import {MatCheckboxModule, MatInputModule} from '@angular/material';
 
-import { FormLogicComponent, FormItemComponent } from './form-logic/form-logic.component';
 import { CheckboxComponent } from './form-components/checkbox/checkbox.component';
 import { InputTextComponent } from './form-components/input-text/input-text.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FormTemplateBaseComponent } from './form-components/form-component-base.component';
+import { FormComponent } from './form-logic/form/form.component';
+import { FormItemComponent } from './form-logic/form-item/form-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormLogicComponent,
     CheckboxComponent,
     InputTextComponent,
     FormTemplateBaseComponent,
     InputTextComponent,
     CheckboxComponent,
     FormItemComponent,
+    FormComponent,
   ],
   imports: [
     FormsModule,
