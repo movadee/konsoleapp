@@ -6,6 +6,6 @@ import { FormGroup } from '@angular/forms';
   template: ``
 })
 export class FormBaseComponent {
-  @Input() question: any;
   @Input() form: FormGroup;
+  @Input() question: any;
 }

@@ -25,13 +25,9 @@ export class FormItemComponent implements OnInit {
   ngOnInit() {
     this.container.clear();
     const componentRef = this.container.createComponent(
-      this.componentFactoryResolver.resolveComponentFactory(this.getComponentForCardType(this.question.componentType))
+      this.componentFactoryResolver.resolveComponentFactory(this.templateMapper[this.question.componentType])
     );
     (<FormBaseComponent>componentRef.instance).question = this.question;
     (<FormBaseComponent>componentRef.instance).form = this.form;
-  }
-
-  private getComponentForCardType(componentType) {
-    return this.templateMapper[componentType];
   }
 }
