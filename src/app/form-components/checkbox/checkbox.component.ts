@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { FormTemplateBaseComponent } from '../form-component-base.component';
+import { FormBaseComponent } from '../form-base-component.component';
 
 @Component({
   selector: 'app-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss']
 })
-export class CheckboxComponent extends FormTemplateBaseComponent { }
+export class CheckboxComponent extends FormBaseComponent { }

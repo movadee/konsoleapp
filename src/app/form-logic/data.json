@@ -45,28 +45,9 @@
         },
         "data": "",
         "validation": [
-          {
-            "type": "required",
-            "message": "Maiden Name is required",
-            "arguments": false
-          }
+         
         ]
       },
-  
-      {
-        "id": "maidenName",
-        "type": "form-text-input",
-        "componentType": "formTextInput",
-        "value": {
-          "label": "Maiden Name",
-          "placeholder": ""
-        },
-        "data": "",
-        "validation": [
-  
-        ]
-      },
-  
       {
         "id": "emailCheckbox",
         "type": "form-checkbox",

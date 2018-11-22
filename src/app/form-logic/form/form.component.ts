@@ -8,29 +8,21 @@ declare var require: any;
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-
-  public heroForm: FormGroup;
-  public items = require('../data.json');
-
-  constructor() { }
+  public form: FormGroup;
+  public questions = require('../data.json');
+  public formGroup: any = {};
+  public validationArr;
 
   ngOnInit() {
-    this.toFormGroup(this.items);
-  }
-
-  private toFormGroup(questions) {
-    let group: any = {};
-    let requiredArr = [];
-
-    questions.fields.forEach(question => {
+    this.questions.fields.forEach(question => {
+      this.validationArr = [];
       question.validation.forEach(item =>  {
-        (item.type === 'required') ? requiredArr.push(Validators[item.type]) : requiredArr.push(Validators[item.type](item.arguments));
+        (item.type === 'required')
+        ? this.validationArr.push(Validators[item.type])
+        : this.validationArr.push(Validators[item.type](item.arguments));
       });
-      group[question.id] = new FormControl(question.data || '', requiredArr);
+      this.formGroup[question.id] = new FormControl(question.data || '', this.validationArr);
     });
-
-    this.heroForm = new FormGroup(group);
+    this.form = new FormGroup(this.formGroup);
   }
-
-
 }

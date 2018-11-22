@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewContainerRef, ViewChild, ComponentFactory
 import { FormGroup } from '@angular/forms';
 import { InputTextComponent } from 'src/app/form-components/input-text/input-text.component';
 import { CheckboxComponent } from 'src/app/form-components/checkbox/checkbox.component';
-import { FormTemplateBaseComponent } from 'src/app/form-components/form-component-base.component';
+import { FormBaseComponent } from 'src/app/form-components/form-base-component.component';
 
 @Component({
   selector: 'app-form-item',
@@ -11,9 +11,8 @@ import { FormTemplateBaseComponent } from 'src/app/form-components/form-componen
 })
 export class FormItemComponent implements OnInit {
 
-  // tslint:disable-next-line:no-input-rename
-  @Input('group') public heroForm: FormGroup;
-  @Input() data: any;
+  @Input() form: FormGroup;
+  @Input() question: any;
   @ViewChild('container', {read: ViewContainerRef}) private container: ViewContainerRef;
 
   readonly templateMapper = {
@@ -24,17 +23,15 @@ export class FormItemComponent implements OnInit {
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.getComponentForCardType(this.data.componentType));
-    const viewContainerRef = this.container;
-    viewContainerRef.clear();
-    const componentRef = viewContainerRef.createComponent(componentFactory);
-    (<FormTemplateBaseComponent>componentRef.instance).data = this.data;
-    (<FormTemplateBaseComponent>componentRef.instance).group = this.heroForm;
+    this.container.clear();
+    const componentRef = this.container.createComponent(
+      this.componentFactoryResolver.resolveComponentFactory(this.getComponentForCardType(this.question.componentType))
+    );
+    (<FormBaseComponent>componentRef.instance).question = this.question;
+    (<FormBaseComponent>componentRef.instance).form = this.form;
   }
 
   private getComponentForCardType(componentType) {
     return this.templateMapper[componentType];
   }
-
-
 }

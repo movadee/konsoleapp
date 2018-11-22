@@ -13,7 +13,7 @@ import {MatCheckboxModule, MatInputModule} from '@angular/material';
 import { CheckboxComponent } from './form-components/checkbox/checkbox.component';
 import { InputTextComponent } from './form-components/input-text/input-text.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { FormTemplateBaseComponent } from './form-components/form-component-base.component';
+import { FormBaseComponent } from './form-components/form-base-component.component';
 import { FormComponent } from './form-logic/form/form.component';
 import { FormItemComponent } from './form-logic/form-item/form-item.component';
 
@@ -22,7 +22,7 @@ import { FormItemComponent } from './form-logic/form-item/form-item.component';
     AppComponent,
     CheckboxComponent,
     InputTextComponent,
-    FormTemplateBaseComponent,
+    FormBaseComponent,
     InputTextComponent,
     CheckboxComponent,
     FormItemComponent,
