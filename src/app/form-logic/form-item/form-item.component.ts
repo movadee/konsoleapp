@@ -27,7 +27,7 @@ export class FormItemComponent implements OnInit {
     const componentRef = this.container.createComponent(
       this.componentFactoryResolver.resolveComponentFactory(this.templateMapper[this.question.componentType])
     );
-    (<FormBaseComponent>componentRef.instance).question = this.question;
     (<FormBaseComponent>componentRef.instance).form = this.form;
+    (<FormBaseComponent>componentRef.instance).question = this.question;
   }
 }

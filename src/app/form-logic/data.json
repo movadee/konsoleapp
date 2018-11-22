@@ -14,7 +14,7 @@
           {
             "type": "required",
             "message": "First name is required",
-            "arguments": true
+            "arguments": false
           }
         ]
       },
@@ -31,7 +31,12 @@
           {
             "type": "required",
             "message": "Last Name is required",
-            "arguments": true
+            "arguments": false
+          },
+          {
+            "type": "minLength",
+            "message": "Min 3 required",
+            "arguments": 3
           }
         ]
       },
