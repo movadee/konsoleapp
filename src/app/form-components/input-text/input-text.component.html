@@ -1,5 +1,11 @@
 <div class="form-group" [formGroup]="form">
   <mat-form-field>
     <input matInput [placeholder]="question.value.label" class="form-control" [formControlName]="question.id">
+    {{form.get(question.id).hasError('required')}}
+    <ng-container *ngFor="let validation of question.validation" ngProjectAs="mat-error">
+      <mat-error *ngIf="form.get(question.id).hasError(validation.type)">{{validation.message}}</mat-error>
+    </ng-container>
   </mat-form-field>
 </div>
+
+<!-- {{question | json}} -->

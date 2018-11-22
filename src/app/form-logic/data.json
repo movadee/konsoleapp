@@ -13,8 +13,7 @@
         "validation": [
           {
             "type": "required",
-            "message": "First name is required",
-            "arguments": false
+            "message": "First name is required"
           }
         ]
       },
@@ -28,11 +27,6 @@
         },
         "data": "",
         "validation": [
-          {
-            "type": "required",
-            "message": "Last Name is required",
-            "arguments": false
-          },
           {
             "type": "minLength",
             "message": "Min 3 required",
